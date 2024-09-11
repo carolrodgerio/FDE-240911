@@ -1,0 +1,68 @@
+@import 'tailwindcss/base';
+@import 'tailwindcss/components';
+@import 'tailwindcss/utilities';
+
+:root {
+  font-family: Inter, system-ui, Avenir, Helvetica, Arial, sans-serif;
+  line-height: 1.5;
+  font-weight: 400;
+  color: #ffffff;
+  background-color: #000000;
+  font-synthesis: none;
+  text-rendering: optimizeLegibility;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+a {
+  font-weight: 500;
+  color: #ec185b;
+  text-decoration: none;
+}
+a:hover {
+  color: #ec185b;
+}
+
+body {
+  @apply m-0 flex items-center justify-center min-w-[320px] min-h-screen bg-black text-white;
+}
+
+h1 {
+  @apply text-5xl leading-tight;
+}
+
+input, button {
+  @apply rounded-lg py-1 px-3 text-base font-medium;
+}
+
+input {
+  @apply border border-white bg-gray-900;
+}
+
+button {
+  @apply border-transparent bg-gray-900 cursor-pointer transition-colors duration-300;
+}
+button:hover {
+  @apply border-[#ec185b];
+}
+button:focus,
+button:focus-visible {
+  @apply outline-none ring-4 ring-[#ec185b];
+}
+
+@media (prefers-color-scheme: light) {
+  :root {
+    color: #242424;
+    background-color: #ffffff;
+  }
+  a:hover {
+    color: #ec185b;
+  }
+  button {
+    background-color: #f9f9f9;
+  }
+  input {
+    border: 1px solid #242424;
+    background-color: #f9f9f9;
+  }
+}
